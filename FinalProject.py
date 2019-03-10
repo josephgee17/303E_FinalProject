@@ -27,6 +27,7 @@ class dragon:
         self.health = health
         self.gold = gold
 
+
     def dragonAttack(self, vAttack, vGold):
         self.health -= vAttack
         self.gold += vGold
@@ -39,6 +40,8 @@ class dragon:
         if self.health >= 50:
             self.health = 50
         print("Health: " + str(self.health))
+
+
 
 def dragoncreation():
   	# This creates the user's character
@@ -58,6 +61,7 @@ def dragoncreation():
     else:
         print("Not yes or no")
         dragoncreation()
+
 
 def turnMenu(dragon):
     # This function contains the main game play
@@ -117,9 +121,11 @@ def cityOptions(dragon):
         print("That's not a city!")
         cityOptions(dragon)
 
+
     #ask user what city they want to attack
     #have attack phase play out
     #return to turn menu
+
 
 def scoreMenu():
   	# This function shows the user the scores
@@ -140,11 +146,15 @@ class village:
       self.gold = gold
       self.damage = damage
 
+
 def probability():
 	# This is our random number generator. It is used to determine how much gold you recieve, as well as how much damage you take
    # returns a percentage
    percent = random.random()
    return percent
+
+
+
 
 def attackphase(village, dragon):
   	# This is the function in which the dragon attacks the village and changes to health and damage are assessed
@@ -157,11 +167,15 @@ def attackphase(village, dragon):
     print("Damage taken: "+str(finalDamage)+" Gold gained: "+str(finalGold))
     dragon.dragonAttack(finalDamage, finalGold)
 
+
 def endGame():
   # This ends the game if the player so chooses to
     sys.exit()
 
+
 def main():
     mainMenu()
+
+
 
 main()
